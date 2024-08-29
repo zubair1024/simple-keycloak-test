@@ -1,0 +1,25 @@
+.login-pf body {
+  background: red;
+}
+
+#kc-header-wrapper {
+  background-image: url(../img/keycloak-logo.png);
+  background-repeat: no-repeat;
+  height: 63px;
+  width: 300px;
+  margin: 62px auto 0;
+}
+
+#kc-form-wrapper {
+  margin-top: 50px;
+}
+
+#kc-form-buttons {
+  margin-top: 20px;
+}
+
+.btn-primary {
+  background-color: red;
+  background-image: none;
+  border-color: #4a4a4a;
+}

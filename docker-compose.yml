@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:latest
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+      KC_HEALTH_ENABLED: "true"
+      KC_METRICS_ENABLED: "true"
+    ports:
+      - 8080:8080
+    volumes:
+      - ./themes:/opt/keycloak/themes
+    command:
+      - start-dev
+
+volumes:
+  keycloak_data:

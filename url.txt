@@ -1,0 +1,1 @@
+http://localhost:8080/realms/test/protocol/openid-connect/auth?client_id=test-client&redirect_uri=http://localhost:8080&response_type=code&scope=openid
