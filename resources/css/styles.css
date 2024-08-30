@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
 body {
   background-color: #eee;
   min-height: 100%;
@@ -85,7 +87,7 @@ a {
   top: 36px;
 }
 
-.input-group > input {
+.input-group>input {
   height: 40px;
   /* line-height: 40px; */
   /* color: #7E7E7E; */
@@ -162,11 +164,11 @@ input::placeholder {
 
 @media (max-width: 768px) {
   .container {
-    grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
   }
 
   .animation-container {
-    display: none;
+      display: none;
   }
 }
 
@@ -194,32 +196,34 @@ input::placeholder {
 }
 
 .circle-one {
-  width: 100vh;
-  height: 100vh;
+  width: 150vh;
+  height: 150vh;
   background-color: rgba(54, 103, 206, 0.17);
-  transform: translate(56%, -19%);
+  transform: translate(50%, -15%);
   animation: swingIn1 2s ease-out forwards;
 }
 
 .circle-two {
-  width: 66.6vh;
-  height: 66.6vh;
+  width: 110vh;
+  height: 110vh;
   background-color: rgba(54, 103, 206, 0.15);
-  transform: translate(54%, -8%);
+  transform: translate(44%, -4%);
   animation: swingIn2 2s ease-out forwards;
 }
 
-/* .circle-three {
-width: 92vh;
-height: 92vh;
-background: linear-gradient(
-to bottom,
-rgba(54, 103, 206, 1),
-rgb(4, 30, 84)
-);
-transform: translate(55%, 11%);
-animation: swingIn3 2s ease-out forwards;
-} */
+.circle-three {
+  width: 80vh;
+  height: 80vh;
+  background-image: url('https://res.cloudinary.com/dusou0qjr/image/upload/v1724927520/boat_plane5_v737cy.png');
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  transform: translate(39%, 13%);
+  animation: swingIn3 2s ease-out forwards;
+}
+
 .img-container {
   position: absolute;
   top: 50%;
@@ -236,38 +240,40 @@ animation: swingIn3 2s ease-out forwards;
 
 @keyframes swingIn1 {
   0% {
-    transform: translate(100%, -100%);
+      transform: translate(100%, -100%);
   }
 
   100% {
-    transform: translate(56%, -19%);
+      transform: translate(50%, -15%);
   }
 }
 
 @keyframes swingIn2 {
   0% {
-    transform: translate(100%, -100%);
+      transform: translate(100%, -100%);
   }
 
   100% {
-    transform: translate(54%, -8%);
+      transform: translate(44%, -4%);
   }
 }
 
-/* @keyframes swingIn3 {
-0% {
-transform: translate(100%, -100%);
+@keyframes swingIn3 {
+  0% {
+      transform: translate(100%, -100%);
+  }
+
+  100% {
+      transform: translate(39%, 13%);
+  }
 }
-100% {
-transform: translate(55%, 11%);
-}
-} */
+
 @keyframes swingIn4 {
   0% {
-    transform: translate(500%, -500%);
+      transform: translate(500%, -500%);
   }
 
   100% {
-    transform: translate(97%, -44%);
+      transform: translate(97%, -44%);
   }
 }

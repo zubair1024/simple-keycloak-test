@@ -1,11 +1,6 @@
 <#import "template.ftl" as layout>
     <@layout.registrationLayout displayMessage=!messagesPerField.existsError('username','password') displayInfo=realm.password && realm.registrationAllowed && !registrationDisabled??; section>
         <#if section="header">
-            <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                new Animate(document.getElementById("canvas"));
-            });
-            </script>
             <#elseif section="form">
                 <div class="container">
                     <div class="login-container">
@@ -63,14 +58,15 @@
                         </form>
                     </div>
                     <div class="animation-container">
-                        <div class="img-container">
-                            <img src="${url.resourcesPath}/img/boat+plane5.png" height="700px" alt="Boat and Plane" />
-                        </div>
-                        <div class="animation-items">
-                            <div class="circle-one"></div>
-                            <div class="circle-two"></div>
-                        </div>
+                        <#-- <div class="img-container">
+                            <img src="${url.resourcesPath}/img/boat+plane5.png" height="700px" alt="" />
+                    </div> -->
+                    <div class="animation-items">
+                        <div class="circle-one"></div>
+                        <div class="circle-two"></div>
+                        <div class="circle-three"></div>
                     </div>
+                </div>
                 </div>
                 <#elseif section="info">
                     <#if realm.password && realm.registrationAllowed && !registrationDisabled??>
