@@ -63,12 +63,10 @@
                         </form>
                     </div>
                     <div class="animation-container">
-                        <div class="img-container">
-                            <img src="${url.resourcesPath}/img/boat+plane5.png" height="700px" alt="Boat and Plane" />
-                        </div>
                         <div class="animation-items">
                             <div class="circle-one"></div>
                             <div class="circle-two"></div>
+                            <div class="circle-three"></div>
                         </div>
                     </div>
                 </div>
