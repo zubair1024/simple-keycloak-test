@@ -1,19 +1,21 @@
-version: "3"
-
+#docker compose -f .\docker-compose.yaml -p keycloak up -d
 services:
   keycloak:
-    image: quay.io/keycloak/keycloak:latest
+    image: quay.io/keycloak/keycloak:25.0.2
+    command: "start-dev --spi-theme-static-max-age=-1 --spi-theme-cache-themes=false --spi-theme-cache-templates=false -Dkeycloak.auth.trusteddevice.trustdays=30"
+    volumes:
+      - ./providers:/opt/keycloak/providers
+      - ./conf:/opt/keycloak/conf
+      - ./themes:/opt/keycloak/themes
     environment:
+      KC_HOSTNAME: localhost
+      KC_HOSTNAME_PORT: 8080
+      KC_HOSTNAME_STRICT_BACKCHANNEL: false
+      KC_HTTP_ENABLED: true
+      KC_HOSTNAME_STRICT_HTTPS: false
+      KC_HEALTH_ENABLED: true
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
-      KC_HEALTH_ENABLED: "true"
-      KC_METRICS_ENABLED: "true"
     ports:
       - 8080:8080
-    volumes:
-      - ./themes:/opt/keycloak/themes
-    command:
-      - start-dev
-
-volumes:
-  keycloak_data:
+    restart: always
