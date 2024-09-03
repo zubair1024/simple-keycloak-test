@@ -55,13 +55,18 @@ a {
   flex-direction: column;
   /* align-items: left; */
   width: 300px;
-  height: 600px;
+  min-height: 600px;
   gap: 20px;
   background-color: white;
   border-radius: 24px;
   padding: 47px 58px;
   filter: drop-shadow(0px 2.846px 49.802px rgba(0, 0, 0, 0.1));
   backdrop-filter: blur(10.671875px);
+}
+
+.login-card-content {
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
 
 .Logo img {
@@ -275,4 +280,25 @@ input::placeholder {
   100% {
     transform: translate(97%, -44%);
   }
+}
+
+.qr-code {
+  text-align: center;
+}
+
+.qr-code img {
+  max-width: 200px;
+  height: auto;
+}
+
+.manual-setup {
+  background-color: #f5f5f5;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.manual-setup code {
+  display: block;
+  word-break: break-all;
+  font-size: 0.9em;
 }

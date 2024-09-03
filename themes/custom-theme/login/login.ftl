@@ -27,6 +27,11 @@
                                         value="${(login.username!'')}"
                                         placeholder="joe@example.com"
                                         autocomplete="off" />
+                                    <#if messagesPerField.existsError('username')>
+                                        <span id="input-error-username" class="${properties.kcInputErrorMessageClass!}" aria-live="polite">
+                                            ${kcSanitize(messagesPerField.get('username'))?no_esc}
+                                        </span>
+                                    </#if>
                                 </div>
                                 <div class="input-group">
                                     <label for="password">
