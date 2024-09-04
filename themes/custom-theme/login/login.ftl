@@ -62,10 +62,24 @@
                         </div>
                         <input class="primary-button" name="login" id="kc-login" type="submit" value="${msg("doLogIn")}" />
                         <div class="social-login">
-                            <p>Or sign in with</p>
-                            <button class="microsoft-login" type="button" onclick="location.href='${url.loginUrl}&kc_idp_hint=microsoft'">
+                            <#-- <button class="microsoft-login" type="button" onclick="location.href='${url.loginUrl}&kc_idp_hint=microsoft'">
                                 <img src="${url.resourcesPath}/img/microsoft-logo-black-and-white.png" alt="Microsoft logo" />
-                            </button>
+                                </button> -->
+                                <#if social.providers??>
+                                    <div class="social-login">
+                                        <p>Or sign in with</p>
+                                        <div id="social-providers">
+                                            <#list social.providers as p>
+                                                <button class="${p.alias}-login" type="button" onclick="location.href='${p.loginUrl}';">
+                                                    <i class="${properties.kcCommonLogoIdP!} ${p.iconClasses!}" aria-hidden="true"></i>
+                                                    <span>
+                                                        ${p.displayName}
+                                                    </span>
+                                                </button>
+                                            </#list>
+                                        </div>
+                                    </div>
+                                </#if>
                         </div>
                     </div>
                 </form>

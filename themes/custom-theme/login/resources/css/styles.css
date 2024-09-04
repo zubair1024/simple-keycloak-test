@@ -160,33 +160,6 @@ input::placeholder {
   flex-direction: column;
 }
 
-.microsoft-login {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ffffff;
-  color: black;
-  padding: 14px;
-  border: 1px solid var(--black-5, rgba(0, 0, 0, 0.05));
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 14px;
-  font-family: archivo;
-  transition: background-color 0.3s ease;
-  width: 100%;
-  max-width: 100%;
-}
-
-.microsoft-login img {
-  height: 17 px;
-  width: 80px;
-  /* margin-right: 10px; */
-}
-
-.microsoft-login:hover {
-  background-color: #ececec !important;
-}
-
 @media (max-width: 768px) {
   .container {
     grid-template-columns: 1fr;
@@ -437,4 +410,34 @@ input::placeholder {
   .alert span[class*="kcFeedback"] {
     font-size: 16px;
   }
+}
+
+#social-providers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#social-providers > button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: black;
+  padding: 14px;
+  border: 1px solid var(--black-5, rgba(66, 66, 66, 0.05));
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: archivo;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 100%;
+}
+
+#social-providers > button:hover {
+  background-color: #ececec !important;
 }
