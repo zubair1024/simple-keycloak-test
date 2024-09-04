@@ -301,6 +301,35 @@ input::placeholder {
   }
 }
 
+.password-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.password-container input {
+  width: calc(100% - 40px); /* Adjusted for the button width */
+  padding-right: 40px; /* Padding to make space for the button */
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 45%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.toggle-password i {
+  font-size: 18px;
+  color: #888;
+}
+.error-message{
+  color: #bd0000;
+}
 .qr-code {
   text-align: center;
 }

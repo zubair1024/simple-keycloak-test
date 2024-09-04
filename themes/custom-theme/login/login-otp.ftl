@@ -28,7 +28,7 @@
                                         class="${properties.kcInputClass!}"
                                         aria-invalid="<#if messagesPerField.existsError('totp')>true</#if>" />
                                     <#if messagesPerField.existsError('totp')>
-                                        <span id="input-error-otp" class="${properties.kcInputErrorMessageClass!}" aria-live="polite">
+                                        <span id="input-error-otp" class="${properties.kcInputErrorMessageClass!} error-message" aria-live="polite">
                                             ${kcSanitize(messagesPerField.get('totp'))?no_esc}
                                         </span>
                                     </#if>

@@ -28,7 +28,7 @@
                                         placeholder="joe@example.com"
                                         autocomplete="off" />
                                     <#if messagesPerField.existsError('username')>
-                                        <span id="input-error-username" class="${properties.kcInputErrorMessageClass!}" aria-live="polite">
+                                        <span id="input-error-username" class="${properties.kcInputErrorMessageClass!} error-message" aria-live="polite">
                                             ${kcSanitize(messagesPerField.get('username'))?no_esc}
                                         </span>
                                     </#if>
@@ -46,6 +46,9 @@
                                         name="password"
                                         autocomplete="off"
                                         placeholder="${msg("password")}" />
+                                    <button type="button" id="togglePassword" class="toggle-password">
+                                        <i id="toggleIcon" class="fa fa-eye"></i>
+                                    </button>
                                     <div class="actions">
                                         <label><input type="checkbox" name="rememberMe" />
                                             ${msg("rememberMe")}
@@ -86,4 +89,17 @@
                         </div>
                     </#if>
         </#if>
+        <script>
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#password');
+        const toggleIcon = document.querySelector('#toggleIcon');
+        togglePassword.addEventListener('click', function() {
+            // Toggle the type attribute
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            // Toggle the eye slash icon
+            toggleIcon.classList.toggle('fa-eye-slash');
+            toggleIcon.classList.toggle('fa-eye');
+        });
+        </script>
     </@layout.registrationLayout>
