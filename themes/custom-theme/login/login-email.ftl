@@ -18,11 +18,14 @@
                         </div>
                         <div class="input-group">
                             <label for="code">
-                                ${msg("emailAuthLabel")}
+                                ${msg("enterEmailCode")}
                             </label>
                             <input type="text" id="code" name="code" autofocus autocomplete="off"
                                 class="${properties.kcInputClass!}"
                                 aria-invalid="<#if messagesPerField.existsError('code')>true</#if>" />
+                            <p style="font-size: 14px; margin-top: 2px; color: #989898;">
+                                ${msg("emailCodeInstruction1")}
+                            </p>
                             <#if messagesPerField.existsError('code')>
                                 <span id="input-error-username" class="${properties.kcInputErrorMessageClass!} error-message" aria-live="polite">
                                     ${kcSanitize(messagesPerField.get('code'))?no_esc}

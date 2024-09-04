@@ -56,7 +56,7 @@ a {
   flex-direction: column;
   /* align-items: left; */
   width: 300px;
-  min-height: 600px;
+  /* min-height: 600px; */
   gap: 20px;
   background-color: white;
   border-radius: 24px;
@@ -110,11 +110,11 @@ input::placeholder {
 }
 
 .actions {
-  color: #c5c5c5;
-  font-family: archivo;
-  font-weight: 400;
+  color: #7e7e7e;
   padding-top: 10px;
   display: flex;
+  font-size: 16px;
+  font-weight: 200;
   /* width: 336px; */
   justify-content: space-between;
   /* gap: 80px; */

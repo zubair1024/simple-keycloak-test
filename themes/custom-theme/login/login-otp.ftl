@@ -7,8 +7,7 @@
                     <div class="login-card">
                         <div class="Logo"><img src="${url.resourcesPath}/img/BEWOTEC_Logo.png" alt="Logo" /></div>
                         <h2>
-                            <#-- ${msg("doLogIn")} -->
-                                OTP Code
+                            ${msg("emailAuthTitle")}
                         </h2>
                         <div class="user-info">
                             <i class="fas fa-user"></i>
@@ -19,8 +18,7 @@
                         </div>
                         <div class="input-group">
                             <label for="otp">
-                                <#-- ${msg("enterEmailCode")} -->
-                                    Email Code
+                                ${msg("loginOtpOneTime")}
                             </label>
                             <input type="text" id="otp" name="otp" autofocus autocomplete="off"
                                 class="${properties.kcInputClass!}"
