@@ -58,6 +58,6 @@
                     </div>
                 </form>
                 <#elseif section="info">
-                    ${msg("configureOTPExplanation")}
+                    <#-- ${msg("configureOTPExplanation")} -->
         </#if>
     </@layout.registrationLayout>

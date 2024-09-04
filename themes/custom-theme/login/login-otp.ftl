@@ -45,6 +45,6 @@
         </div>
         </form>
         <#elseif section="info">
-            ${msg("emailInstruction")}
-            </#if>
+            <#-- ${msg("emailInstruction")} -->
+                </#if>
     </@layout.registrationLayout>

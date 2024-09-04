@@ -64,7 +64,7 @@
                     </div>
                 </form>
                 <#elseif section="info">
-                    ${msg("updatePasswordInfoMessage")}
+                    <#-- ${msg("updatePasswordInfoMessage")} -->
         </#if>
         <script>
         const togglePassword = document.querySelector('#togglePassword');

@@ -112,6 +112,7 @@ input::placeholder {
 .actions {
   color: #c5c5c5;
   font-family: archivo;
+  font-weight: 400;
   padding-top: 10px;
   display: flex;
   /* width: 336px; */

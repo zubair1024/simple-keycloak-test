@@ -10,27 +10,29 @@
                     <h2>
                         ${msg("emailVerificationTitle")}
                     </h2>
-                    <div class="login-card-content">
+                    <#-- <div class="login-card-content">
                         <p>
                             ${msg("emailVerificationInstruction", email)}
                         </p>
-                    </div>
-                    <div class="email-icon">
-                        <i class="fa fa-envelope fa-5x" aria-hidden="true"></i>
-                    </div>
-                    <div class="resend-email">
-                        <p>
-                            ${msg("emailVerificationResend")}
-                        </p>
-                        <a href="${url.loginAction}" class="resend-link">
-                            ${msg("doResendEmail")}
-                        </a>
-                    </div>
-                    <button href="${url.loginUrl}" class="primary-button">
+                </div> -->
+                <div class="email-icon">
+                    <i class="fa fa-envelope fa-5x" aria-hidden="true"></i>
+                </div>
+                <div class="resend-email">
+                    <p>
+                        ${msg("emailVerificationResend")}
+                    </p>
+                    <a href="${url.loginAction}" class="resend-link">
+                        ${msg("doResendEmail")}
+                    </a>
+                </div>
+                <a href="${url.loginUrl}">
+                    <button class="primary-button">
                         ${msg("backToLogin")}
                     </button>
+                </a>
                 </div>
                 <#elseif section="info">
-                    ${msg("emailVerificationAdditionalInfo")}
+                    <#-- ${msg("emailVerificationAdditionalInfo")} -->
         </#if>
     </@layout.registrationLayout>

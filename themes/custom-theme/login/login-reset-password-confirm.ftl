@@ -28,6 +28,6 @@
                     </a>
                 </div>
                 <#elseif section="info">
-                    ${msg("emailSentInfo")}
+                    <#-- ${msg("emailSentInfo")} -->
         </#if>
     </@layout.registrationLayout>

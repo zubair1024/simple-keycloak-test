@@ -31,18 +31,19 @@
                         </div>
                         <div class="actions">
                             <label>
-                                <input type="checkbox" id="rememberMe" name="rememberMe"
-                                    <#if (login.registerTrustedDevice)?? && login.registerTrustedDevice>checked
-        </#if> />
-        ${msg("trustThisDevice")}
-        </label>
-        </div>
+                                <input type="checkbox" id="registerTrustedDevice" name="register-trusted-device"
+                                    ${(rememberMe!false)?string('checked', '')} />
+                                ${msg("trustThisDevice")}
+                            </label>
+                        </div>
+                        <input type="hidden" id="id-hidden-input" name="credentialId" <#if auth.selectedCredential?has_content>value="${auth.selectedCredential}"
+        </#if>/>
         <button class="primary-button" type="submit">
             ${msg("doSubmit")}
         </button>
         </div>
         </form>
         <#elseif section="info">
-            ${msg("emailCodeInstruction")}
-            </#if>
+            <#-- ${msg("emailCodeInstruction")} -->
+                </#if>
     </@layout.registrationLayout>
