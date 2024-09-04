@@ -24,7 +24,9 @@
 </head>
 <body>
     <#--  <#nested "header">  -->
-    <#--  <#if displayMessage && message?has_content && (message.type != ' warning' || !isAppInitiatedAction??)>
+        <div class="container">
+            <div class="login-container">
+            <#if displayMessage && message?has_content && (message.type != ' warning' || !isAppInitiatedAction??)>
                 <div class="alert alert-${message.type}">
                     <#if message.type='success'><span class="${properties.kcFeedbackSuccessIcon!}"></span></#if>
                     <#if message.type='warning'><span class="${properties.kcFeedbackWarningIcon!}"></span></#if>
@@ -34,11 +36,20 @@
                         ${kcSanitize(message.summary)?no_esc}
                     </span>
                 </div>
-        </#if> -->
+        </#if>
         <#nested "form">
             <#if displayInfo>
                 <#nested "info">
             </#if>
+            </div>
+            <div class="animation-container">
+                <div class="animation-items">
+                    <div class="circle-one"></div>
+                    <div class="circle-two"></div>
+                    <div class="circle-three"></div>
+                </div>
+            </div>
+            </div>
             </body>
 
     </html>

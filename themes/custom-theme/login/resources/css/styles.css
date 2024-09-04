@@ -40,6 +40,7 @@ a {
 .login-container {
   font-family: "Archivo", sans-serif;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -355,4 +356,84 @@ input::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Alert Styles */
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.alert .message-text {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+/* Success Alert */
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+/* Warning Alert */
+.alert-warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+
+/* Error Alert */
+.alert-error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+/* Info Alert */
+.alert-info {
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+}
+
+/* Icon Styles */
+.alert span[class*="kcFeedbackSuccess"] {
+  color: #155724;
+}
+
+.alert span[class*="kcFeedbackWarning"] {
+  color: #856404;
+}
+
+.alert span[class*="kcFeedbackError"] {
+  color: #721c24;
+}
+
+.alert span[class*="kcFeedbackInfo"] {
+  color: #0c5460;
+}
+
+/* Icon size and alignment */
+.alert span[class*="kcFeedback"] {
+  font-size: 18px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .alert {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .alert span[class*="kcFeedback"] {
+    font-size: 16px;
+  }
 }
