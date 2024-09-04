@@ -12,7 +12,9 @@
                         <form id="kc-form-login" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
                             <div class="login-card">
                                 <div class="Logo"><img src="${url.resourcesPath}/img/BEWOTEC_Logo.png" alt="BEWOTEC Logo" /></div>
-                                <h2>Login to DaVinci NT</h2>
+                                <h2>
+                                    ${msg("loginTitle",(realm.displayName!''))}
+                                </h2>
                                 <div class="input-group">
                                     <label for="username">
                                         ${msg("username")}

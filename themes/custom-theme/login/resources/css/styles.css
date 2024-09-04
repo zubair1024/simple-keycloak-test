@@ -327,7 +327,7 @@ input::placeholder {
   font-size: 18px;
   color: #888;
 }
-.error-message{
+.error-message {
   color: #bd0000;
 }
 .qr-code {
@@ -349,4 +349,10 @@ input::placeholder {
   display: block;
   word-break: break-all;
   font-size: 0.9em;
+}
+
+.email-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

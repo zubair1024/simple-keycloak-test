@@ -8,7 +8,9 @@
                         <form id="kc-email-code-login-form" class="${properties.kcFormClass!}" action="${url.loginAction}" method="post">
                             <div class="login-card">
                                 <div class="Logo"><img src="${url.resourcesPath}/img/BEWOTEC_Logo.png" alt="Logo" /></div>
-                                <h2>OTP Code</h2>
+                                <h2>
+                                    ${msg("emailAuthTitle", realm.displayName)}
+                                </h2>
                                 <div class="user-info">
                                     <i class="fas fa-user"></i>
                                     <span class="username">
@@ -17,7 +19,9 @@
                                     <a href="${url.loginRestartFlowUrl}" class="edit-icon"><i class="fas fa-edit"></i></a>
                                 </div>
                                 <div class="input-group">
-                                    <label for="code">Email Code</label>
+                                    <label for="code">
+                                        ${msg("emailAuthLabel")}
+                                    </label>
                                     <input type="text" id="code" name="code" autofocus autocomplete="off"
                                         class="${properties.kcInputClass!}"
                                         aria-invalid="<#if messagesPerField.existsError('code')>true</#if>" />
@@ -32,7 +36,7 @@
                                         <input type="checkbox" id="rememberMe" name="rememberMe"
                                             <#if (login.registerTrustedDevice)?? && login.registerTrustedDevice>checked
         </#if> />
-        Trust this device
+        ${msg("trustThisDevice")}
         </label>
         </div>
         <button class="primary-button" type="submit">

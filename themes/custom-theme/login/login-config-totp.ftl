@@ -40,6 +40,19 @@
                                         </span>
                                     </#if>
                                 </div>
+                                <div class="input-group">
+                                    <label for="userLabel" class="${properties.kcLabelClass!}">
+                                        ${msg("otpDeviceName")}
+                                    </label>
+                                    <input type="text" id="userLabel" name="userLabel" autocomplete="off"
+                                        class="${properties.kcInputClass!}"
+                                        aria-invalid="<#if messagesPerField.existsError('userLabel')>true</#if>" />
+                                    <#if messagesPerField.existsError('userLabel')>
+                                        <span id="input-error-user-label" class="${properties.kcInputErrorMessageClass!} error-message" aria-live="polite">
+                                            ${kcSanitize(messagesPerField.get('userLabel'))?no_esc}
+                                        </span>
+                                    </#if>
+                                </div>
                                 <input type="hidden" id="totpSecret" name="totpSecret" value="${totp.totpSecret}" />
                                 <button class="primary-button" type="submit">
                                     ${msg("doSubmit")}
