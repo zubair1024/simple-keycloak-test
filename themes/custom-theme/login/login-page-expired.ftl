@@ -12,7 +12,7 @@
                     </p>
                     <div class="input-group">
                         <a id="loginRestartLink" href="${url.loginRestartFlowUrl}">
-                            <button class="primary-button">
+                            <button class="tertiary-button">
                                 ${msg("restartLogin")}
                             </button>
                         </a>.
