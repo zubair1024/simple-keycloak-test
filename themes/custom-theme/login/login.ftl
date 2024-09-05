@@ -46,6 +46,11 @@
                                 name="password"
                                 autocomplete="off"
                                 placeholder="${msg("password")}" />
+                            <#if messagesPerField.existsError('password')>
+                                <span id="input-error-password" class="${properties.kcInputErrorMessageClass!} error-message" aria-live="polite">
+                                    ${kcSanitize(messagesPerField.get('password'))?no_esc}
+                                </span>
+                            </#if>
                             <button type="button" id="togglePassword" class="toggle-password">
                                 <i id="toggleIcon" class="fa fa-eye"></i>
                             </button>
