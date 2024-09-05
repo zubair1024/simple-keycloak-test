@@ -31,8 +31,9 @@
                         </div>
                         <div class="actions">
                             <label>
-                                <input type="checkbox" id="rememberMe" name="rememberMe" ${(rememberMe!false)?string('checked', '')} />
-                                <#-- ${msg("rememberMe")} --> Trust this device
+                                <input type="checkbox" id="registerTrustedDevice" name="register-trusted-device"
+                                    ${(rememberMe!false)?string('checked', '')} />
+                                ${msg("trustThisDevice")}
                             </label>
                         </div>
                         <input type="hidden" id="id-hidden-input" name="credentialId" <#if auth.selectedCredential?has_content>value="${auth.selectedCredential}"
