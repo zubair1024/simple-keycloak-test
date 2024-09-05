@@ -51,6 +51,12 @@
                                 </span>
                             </#if>
                         </div>
+                        <div>
+                            <input type="checkbox" id="logout-sessions" name="logout-sessions" value="on" checked>
+                            <label style="font-weight: 100; font-size: 16px;" for="logout-sessions">
+                                ${msg("logoutOtherSessions")}
+                            </label>
+                        </div>
                         <input type="hidden" id="totpSecret" name="totpSecret" value="${totp.totpSecret}" />
                         <button class="primary-button" type="submit">
                             ${msg("doSubmit")}
